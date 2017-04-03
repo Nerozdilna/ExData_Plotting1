@@ -18,7 +18,7 @@ data_subset <- subset(dataset, Date == "2007-02-01" | Date == "2007-02-02")
 timeline <- strptime(paste(data_subset$Date, data_subset$Time), format = "%Y-%m-%d %H:%M:%S", tz = "UTC")
 
 # Start PNG graphic device
-png() 
+png(filename = "plot4.png") 
 # Split screen to fit 4 plots
 par(mfrow = c(2, 2))
 
