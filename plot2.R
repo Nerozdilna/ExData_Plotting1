@@ -21,6 +21,6 @@ data_subset$Global_active_power <- as.numeric(as.character(data_subset$Global_ac
 timeline <- strptime(paste(data_subset$Date, data_subset$Time), format = "%Y-%m-%d %H:%M:%S", tz = "UTC") 
 
 # Build plot
-png() # Open PNG graphic device
+png(filename = "plot2.png") # Open PNG graphic device
 plot(timeline, data_subset$Global_active_power, type = "l", xlab = "", ylab = "Global Active Power (kilowatts)")
 dev.off() # Close device
