@@ -18,7 +18,7 @@ data_subset <- subset(dataset, Date == "2007-02-01" | Date == "2007-02-02")
 data_subset$Global_active_power <- as.numeric(as.character(data_subset$Global_active_power))
 
 # Build histogram
-png() # Open PNG graphic device
+png(filename = "plot1.png") # Open PNG graphic device
 hist(data_subset$Global_active_power, col = "red", main = "Global Active Power", xlab = "Global Active Power (kilowatts)", breaks = 12)
 dev.off() # Close graphic device
 # Note: Values larger than 5.5 (4 records out of 2880 in total) are not reflected on histogram. To view them, "breaks" argument should be increased (say, to 150)
