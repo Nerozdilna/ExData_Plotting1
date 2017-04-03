@@ -23,7 +23,7 @@ data_subset$Sub_metering_2 <- as.numeric(as.character(data_subset$Sub_metering_2
 data_subset$Sub_metering_3 <- as.numeric(as.character(data_subset$Sub_metering_3))
 
 # Plot data from Sub_metering_1
-png() # Start PNG graphic device
+png(filename = "plot3.png") # Start PNG graphic device
 with(data_subset, plot(timeline, Sub_metering_1, type = "l", xlab = "", ylab = "Energy sub metering"))
 
 # Add data from next two columns
